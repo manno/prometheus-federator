@@ -200,12 +200,12 @@ helmProjectOperator:
   containerSecurityContext:
     allowPrivilegeEscalation: false
     privileged: false
+    readOnlyRootFilesystem: true
     capabilities:
       drop:
       - all
 
   securityContext:
-    readOnlyRootFilesystem: true
     runAsNonRoot: true
     runAsUser: 1000
     runAsGroup: 1000
@@ -238,12 +238,12 @@ helmProjectOperator:
     containerSecurityContext:
       allowPrivilegeEscalation: false
       privileged: false
+      readOnlyRootFilesystem: true
       capabilities:
         drop:
         - all
 
     securityContext:
-      readOnlyRootFilesystem: true
       runAsNonRoot: true
       runAsUser: 1000
       runAsGroup: 1000
